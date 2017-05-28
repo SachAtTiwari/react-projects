@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.calcButton{
+   margin:5px;
+}
+
+.calcMain{
+  height: 410px;
+  width: 300px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #CCC;
+  border: 2px solid #908b85;
+  border-radius: 20px;
+}
+
+.title{
+  text-align:center;
+}
+
+#equalButton {
+  position: absolute;
+  margin-left: 8px;
+  margin-top: -50px;
+  height: 90px;
+}
+
+#zeroButton {
+  width: 114px;
+}
+
+.text {
+   height:60px;
+   font-size:35px;
+
+}
+
+input {
+  width:280px;; 
+  margin-left:8px;
+  margin-right:auto;
+  height:50px;
+  text-align:right;  
+  
+}
+
+
+button {
+  border-radius: 8px;
+  background-color: #3a3a3a;
+  margin: 0 4px 10px 8px;
+  height: 40px;
+  width: 50px;
+  box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+}
+
+button:active {
+  transform: translate(0px, 3px);
+  box-shadow: none;
+}
+
+.buttons {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  display: inline-block;
+  width: 280px;
+  height: auto;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.red{
+  font-size: 14px;
+  background-color: #a72d45;
+  box-shadow: 0px 3px 0px 0px #671c2a;
+  width: 114px;
+}

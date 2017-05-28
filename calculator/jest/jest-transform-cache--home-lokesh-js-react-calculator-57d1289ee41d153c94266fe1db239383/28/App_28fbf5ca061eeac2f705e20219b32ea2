@@ -1,0 +1,137 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/home/lokesh/js/react/calculator/src/App.js';
+//import logo from './logo.svg';
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react); /* istanbul ignore next */require('./App.css'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+//import * as ReactBootstrap from 'react-bootstrap';
+//import $ from 'jquery';
+/* eslint-disable */
+
+
+
+class App extends /* istanbul ignore next */_react.Component {
+  constructor(props) {/* istanbul ignore next */var _this;
+    /* istanbul ignore next */_this = super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    handleButton = function (event) {
+      //console.log("el is", event.target.value);
+      /* istanbul ignore next */_this.value = event.target.value;
+      if ( /* istanbul ignore next */_this.value === '=' && /* istanbul ignore next */_this.multipleEqualTo === false && /* istanbul ignore next */_this.firstList.length !== 0 && /* istanbul ignore next */_this.secondList.length !== 0) {
+        /* istanbul ignore next */_this.firstValue = /* istanbul ignore next */_this.firstList.join('');
+        console.log("first val", /* istanbul ignore next */_this.firstValue);
+        /* istanbul ignore next */_this.secondValue = /* istanbul ignore next */_this.secondList.join('');
+        console.log("calculate result ", /* istanbul ignore next */_this.firstValue, /* istanbul ignore next */_this.operation, /* istanbul ignore next */_this.secondValue);
+        /* istanbul ignore next */_this.result = parseFloat( /* istanbul ignore next */_this.firstValue, 10) + /* istanbul ignore next */_this.operation + parseFloat( /* istanbul ignore next */_this.secondValue, 10);
+        /* istanbul ignore next */_this.firstList = [];
+        /* istanbul ignore next */_this.operationList = [];
+        /* istanbul ignore next */_this.secondList = [];
+        /* istanbul ignore next */_this.multipleEqualTo = true;
+        /* istanbul ignore next */_this.firstList.push(eval( /* istanbul ignore next */_this.result));
+        /* istanbul ignore next */_this.setState({ value: eval( /* istanbul ignore next */_this.result) });
+      } else
+      if ( /* istanbul ignore next */_this.value === 'AC') {
+        /* istanbul ignore next */_this.firstList = [];
+        /* istanbul ignore next */_this.operationList = [];
+        /* istanbul ignore next */_this.secondList = [];
+        /* istanbul ignore next */_this.multipleEqualTo = false;
+        /* istanbul ignore next */_this.checkList = false;
+        /* istanbul ignore next */_this.setState({ value: 0 });
+
+      } else {
+        if ( /* istanbul ignore next */_this.value === '+' || /* istanbul ignore next */_this.value === '/' || /* istanbul ignore next */_this.value === '-' || /* istanbul ignore next */_this.value === '*') {
+          if ( /* istanbul ignore next */_this.operationList.length === 0 && /* istanbul ignore next */_this.firstList.length !== 0) {
+            /* istanbul ignore next */_this.operationList.push( /* istanbul ignore next */_this.value);
+            /* istanbul ignore next */_this.checkList = true;
+            /* istanbul ignore next */_this.operation = /* istanbul ignore next */_this.value;
+            /* istanbul ignore next */_this.multipleEqualTo = false;
+            /* istanbul ignore next */_this.setState({ value: /* istanbul ignore next */_this.value });
+          }
+        } else {
+          if ( /* istanbul ignore next */_this.checkList === true && /* istanbul ignore next */_this.value !== '=') {
+            console.log("second list ", /* istanbul ignore next */_this.secondList.join(''));
+            /* istanbul ignore next */_this.secondList.push( /* istanbul ignore next */_this.value);
+            /* istanbul ignore next */_this.multipleEqualTo = false;
+            if ( /* istanbul ignore next */_this.secondList.join('').length < 8) {
+              /* istanbul ignore next */_this.setState({ value: /* istanbul ignore next */_this.secondList.join('') });
+            }
+          } else {
+            if ( /* istanbul ignore next */_this.value !== '=') {
+              /* istanbul ignore next */_this.firstList.push( /* istanbul ignore next */_this.value);
+              /* istanbul ignore next */_this.multipleEqualTo = false;
+              if ( /* istanbul ignore next */_this.firstList.join('').length < 8) {
+                console.log("first list ", /* istanbul ignore next */_this.firstList.join(''));
+                /* istanbul ignore next */_this.setState({ value: /* istanbul ignore next */_this.firstList.join('') });
+              }
+            }
+          }
+        }
+      }
+    }; /* istanbul ignore next */this.
+
+    onChange = function (event) {
+      console.log("in app change", event);
+    };this.state = { value: 0 };this.onChange = this.onChange.bind(this);this.handleButton = this.handleButton.bind(this);this.firstList = [];this.secondList = [];this.operationList = [];this.firstValue = '';this.secondValue = '';this.checkList = false;this.value = '';this.operation = '';this.multipleEqualTo = false;this.result = '';}
+
+
+  render() {
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'calcMain', __source: { fileName: _jsxFileName, lineNumber: 91 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'title', __source: { fileName: _jsxFileName, lineNumber: 92 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h6', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 93 }, __self: this }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'strong', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 93 }, __self: this }, /* istanbul ignore next */'ELECTRONIC CALCUATOR'))),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'text', __source: { fileName: _jsxFileName, lineNumber: 95 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{ type: 'text', size: '28', value: this.state.value, width: '28', readOnly: /* istanbul ignore next */true, __source: { fileName: _jsxFileName, lineNumber: 96 }, __self: this })),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'buttons', onClick: this.handleButton, __source: { fileName: _jsxFileName, lineNumber: 98 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ className: 'red', type: 'button', value: 'AC', __source: { fileName: _jsxFileName, lineNumber: 99 }, __self: this }, /* istanbul ignore next */'AC'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '/', __source: { fileName: _jsxFileName, lineNumber: 100 }, __self: this }, /* istanbul ignore next */'\xF7'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '*', __source: { fileName: _jsxFileName, lineNumber: 101 }, __self: this }, /* istanbul ignore next */'x'),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '7', __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this }, /* istanbul ignore next */'7'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '8', __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this }, /* istanbul ignore next */'8'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '9', __source: { fileName: _jsxFileName, lineNumber: 105 }, __self: this }, /* istanbul ignore next */'9'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '-', __source: { fileName: _jsxFileName, lineNumber: 106 }, __self: this }, /* istanbul ignore next */'-'),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '4', __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, /* istanbul ignore next */'4'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '5', __source: { fileName: _jsxFileName, lineNumber: 109 }, __self: this }, /* istanbul ignore next */'5'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '6', __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this }, /* istanbul ignore next */'6'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '+', __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this }, /* istanbul ignore next */'+'),
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '1', __source: { fileName: _jsxFileName, lineNumber: 114 }, __self: this }, /* istanbul ignore next */'1'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '2', __source: { fileName: _jsxFileName, lineNumber: 115 }, __self: this }, /* istanbul ignore next */'2'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '3', __source: { fileName: _jsxFileName, lineNumber: 116 }, __self: this }, /* istanbul ignore next */'3'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ className: 'invisible', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this }, /* istanbul ignore next */'N'),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ id: 'zeroButton', value: '0', __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }, /* istanbul ignore next */'0'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ value: '.', __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this }, /* istanbul ignore next */'.'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ id: 'equalButton', value: '=', __source: { fileName: _jsxFileName, lineNumber: 121 }, __self: this }, /* istanbul ignore next */'=')))
+
+
+      /*<div className="App">
+                                                                                                                                                                                                                                                                            <div className="App-header">
+                                                                                                                                                                                                                                                                              <img src={logo} className="App-logo" alt="logo" />
+                                                                                                                                                                                                                                                                              <h2>Welcome to React</h2>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                            <p className="App-intro">
+                                                                                                                                                                                                                                                                              To get started, edit <code>src/App.js</code> and save to reload.
+                                                                                                                                                                                                                                                                            </p>
+                                                                                                                                                                                                                                                                          </div>*/);
+
+  }} /* istanbul ignore next */exports.default =
+
+
+App;
