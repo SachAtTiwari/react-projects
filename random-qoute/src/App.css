@@ -1,0 +1,57 @@
+.main-quote-box{
+  height: 350px;
+  width: 600px;
+  position:relative;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #A5E5E5;
+  border: 2px solid #908b85;
+  border-radius: 20px;
+    
+}
+
+body{
+  background:#CCC;
+}
+
+.quote{
+  position:absolute;
+  left:15px;
+}
+
+.author-text{
+  position:absolute;
+  right:35px;
+  bottom:65px;
+}
+
+.buttonText{
+  position:absolute;
+  right:25px;
+  bottom:25px;
+  width:130px;
+  height:40px;
+  border: 2px solid #908b85;
+  border-radius: 20px;
+  
+}
+
+.quote-text{
+   position:relative;
+   font-size:24px;
+   left:33px;
+}
+
+.icon {
+  position:absolute;
+  left:25px;
+  bottom:25px;
+  color:blue;
+
+}
+
+.quote-box{
+  width:500px;
+  height:400px;
+}
