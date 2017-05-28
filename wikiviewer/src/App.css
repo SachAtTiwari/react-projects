@@ -1,0 +1,73 @@
+.mainwiki{
+
+  position:relative;
+  height: 410px;
+  width: 500px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  //background:#bcbdbe;
+  //border: 2px solid #908b85;
+  //border-radius: 20px;
+
+}
+
+.resultView{
+  position:relative;
+  height: 250px;
+  margin:20px;
+  display:block;
+  border: 2px solid #eee;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:10px 10px 5px black;
+}
+.resultView:hover{
+   border-left:5px solid green;
+   margin-left:-5px;
+   background:#eee;
+}
+
+.resultView a{
+   position:absolute;
+   color:green;
+   top:10px;
+   left:10px;
+}
+.resultView p{
+   position:absolute;
+   color:blue;
+   top:20px;
+   left:10px;
+
+}
+
+/*Code copied from w3schools*/
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://www.w3schools.com/howto/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+.link {
+   color:green;
+}
+
+
+
+body {
+   background:#CCC;
+}
